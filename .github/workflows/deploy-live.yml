@@ -1,0 +1,54 @@
+# Builds the site and publishes it to the live repo iamabotama/kevinvanflandern.com,
+# served by GitHub Pages at https://kevinvanflandern.com.
+# Runs on every push to main, or by hand from the Actions tab.
+#
+# Auth: a deploy key with write access on kevinvanflandern.com; its private half is the
+# LIVE_DEPLOY_KEY secret in this repo.
+name: Deploy to live site (kevinvanflandern.com)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: live-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4   # version comes from packageManager in package.json
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      # Static site only; the Express server in server/ is not needed on GitHub Pages.
+      - name: Build
+        run: pnpm exec vite build
+
+      # Single-page app: unknown paths fall back to the app, which shows its own not-found page.
+      - name: SPA fallback
+        run: cp dist/public/index.html dist/public/404.html
+
+      - name: Push to iamabotama/kevinvanflandern.com
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          deploy_key: ${{ secrets.LIVE_DEPLOY_KEY }}
+          external_repository: iamabotama/kevinvanflandern.com
+          publish_branch: main
+          publish_dir: ./dist/public
+          cname: kevinvanflandern.com
+          user_name: kvf-deploy[bot]
+          user_email: kvf-deploy@users.noreply.github.com
+          full_commit_message: "Deploy kevinvanflandern@${{ github.sha }}"
