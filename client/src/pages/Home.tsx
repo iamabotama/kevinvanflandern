@@ -50,8 +50,8 @@ export default function Home() {
       LIFETIME_MAX: 10000,
       FADE_OUT_TIME: 1500,
       COLORS: {
-        PURPLE: '168, 85, 247',
-        VIOLET: '192, 38, 211'
+        PURPLE: '134, 192, 224', // VF steel blue (#86C0E0)
+        VIOLET: '69, 96, 255'    // electric blue from the VF cube art (#4560FF)
       }
     };
 
@@ -294,23 +294,24 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div className="min-h-screen bg-ink">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-white/5">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-ink/80 backdrop-blur-xl border-b border-white/5">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-fuchsia-400 bg-clip-text text-transparent">
-              KVF
-            </div>
+            <a href="#" className="flex items-center gap-3 text-slate-100 hover:text-white transition-colors" aria-label="Kevin Van Flandern, top of page">
+              <svg viewBox="-40 -40 1080 946" className="h-7 w-auto" fill="currentColor" aria-hidden="true"><path d="M0 0 175 0 405 398.37 405 0 1000 0 945.15 95 500 95 500 866.03ZM585 180 896.08 180 585 718.8 585 370 700.93 370 750 285 585 285Z"/></svg>
+              <span className="text-lg font-semibold tracking-tight">Kevin Van Flandern</span>
+            </a>
             <div className="flex items-center gap-8">
               <div className="hidden md:flex items-center gap-8">
-                <a href="#about" className="text-slate-300 hover:text-purple-400 transition-colors">About</a>
-                <a href="#experience" className="text-slate-300 hover:text-purple-400 transition-colors">Experience</a>
-                <a href="#patents" className="text-slate-300 hover:text-purple-400 transition-colors">Patents</a>
-                <a href="#contact" className="text-slate-300 hover:text-purple-400 transition-colors">Contact</a>
+                <a href="#about" className="text-slate-300 hover:text-vf-400 transition-colors">About</a>
+                <a href="#experience" className="text-slate-300 hover:text-vf-400 transition-colors">Experience</a>
+                <a href="#patents" className="text-slate-300 hover:text-vf-400 transition-colors">Patents</a>
+                <a href="#contact" className="text-slate-300 hover:text-vf-400 transition-colors">Contact</a>
               </div>
               {/* Shown on every screen size, since the section links are desktop-only */}
-              <a href="https://vftech.io" target="_blank" rel="noopener" className="text-purple-300 hover:text-purple-200 transition-colors">
+              <a href="https://vftech.io" target="_blank" rel="noopener" className="text-vf-300 hover:text-vf-200 transition-colors">
                 VFTech <span aria-hidden="true">↗</span>
               </a>
             </div>
@@ -320,41 +321,43 @@ export default function Home() {
 
       {/* Hero Section */}
       <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden pt-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-950/20 via-slate-950 to-fuchsia-950/20"></div>
+        <div className="absolute inset-0 bg-[url('/images/vf-hero-bg.webp')] bg-cover bg-[center_70%]" aria-hidden="true"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-ink/20" aria-hidden="true"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-transparent to-ink" aria-hidden="true"></div>
         
         <div className="container relative z-10 mx-auto px-6 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <Badge variant="outline" className="border-purple-500/30 text-purple-400 bg-purple-950/30 backdrop-blur-sm px-4 py-1.5 text-sm font-medium rounded-full">
+              <Badge variant="outline" className="border-vf-500/30 text-vf-400 bg-vf-950/30 backdrop-blur-sm px-4 py-1.5 text-sm font-medium rounded-full">
                 TECHNOLOGY LEADER
               </Badge>
               
               <div>
                 <h1 className="text-6xl md:text-7xl font-bold mb-4">
-                  <span className="bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-white via-vf-200 to-white bg-clip-text text-transparent">
                     Kevin
                   </span>
                   <br />
-                  <span className="bg-gradient-to-r from-purple-400 via-fuchsia-400 to-purple-400 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-vf-300 via-vf-400 to-vf-300 bg-clip-text text-transparent">
                     Van Flandern
                   </span>
                 </h1>
-                <div className="h-1 w-24 bg-gradient-to-r from-purple-500 to-fuchsia-500 rounded-full mb-6"></div>
+                <div className="h-1 w-24 bg-gradient-to-r from-vf-500 to-vfx-500 rounded-full mb-6"></div>
                 <p className="text-xl text-slate-300 leading-relaxed max-w-xl">
                   25+ years architecting complex systems at massive scale. 4 U.S. patents. Expert in Agile at Scale, AI/LLM, and modern software and services architecture.
                 </p>
               </div>
 
               <div className="flex flex-wrap gap-3">
-                <Badge className="bg-purple-500/10 text-purple-300 border border-purple-500/30 hover:bg-purple-500/20 transition-all px-4 py-2 text-sm rounded-xl">
+                <Badge className="bg-vf-500/10 text-vf-300 border border-vf-500/30 hover:bg-vf-500/20 transition-all px-4 py-2 text-sm rounded-xl">
                   <Award className="w-4 h-4 mr-2" />
                   4 Patents
                 </Badge>
-                <Badge className="bg-fuchsia-500/10 text-fuchsia-300 border border-fuchsia-500/30 hover:bg-fuchsia-500/20 transition-all px-4 py-2 text-sm rounded-xl">
+                <Badge className="bg-vfx-500/10 text-vf-300 border border-vfx-500/30 hover:bg-vfx-500/20 transition-all px-4 py-2 text-sm rounded-xl">
                   <Briefcase className="w-4 h-4 mr-2" />
                   Microsoft Alumni
                 </Badge>
-                <Badge className="bg-purple-500/10 text-purple-300 border border-purple-500/30 hover:bg-purple-500/20 transition-all px-4 py-2 text-sm rounded-xl">
+                <Badge className="bg-vf-500/10 text-vf-300 border border-vf-500/30 hover:bg-vf-500/20 transition-all px-4 py-2 text-sm rounded-xl">
                   <Lightbulb className="w-4 h-4 mr-2" />
                   AI & Modern Architecture
                 </Badge>
@@ -363,7 +366,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-4 pt-4">
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-purple-600 to-fuchsia-600 hover:from-purple-500 hover:to-fuchsia-500 text-white shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transition-all rounded-xl px-8"
+                  className="bg-gradient-to-r from-vf-600 to-vfx-600 hover:from-vf-500 hover:to-vfx-500 text-white shadow-lg shadow-vf-500/30 hover:shadow-vf-500/50 transition-all rounded-xl px-8"
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Get In Touch
@@ -371,7 +374,7 @@ export default function Home() {
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="border-purple-500/30 text-purple-300 hover:bg-purple-500/10 hover:border-purple-500/50 rounded-xl px-8"
+                  className="border-vf-500/30 text-vf-300 hover:bg-vf-500/10 hover:border-vf-500/50 rounded-xl px-8"
                   asChild
                 >
                   <a href="https://www.linkedin.com/in/kevin-van-flandern-1949aa4/" target="_blank" rel="noopener noreferrer">
@@ -384,12 +387,14 @@ export default function Home() {
 
             <div className="relative">
               <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-fuchsia-600 rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-vf-600 to-vfx-600 rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
                 <div className="relative">
                   <img 
-                    src="/images/kevin-headshot.png" 
+                    src="/images/kevin-headshot.webp"
+                    width={800}
+                    height={1000} 
                     alt="Kevin Van Flandern" 
-                    className="relative rounded-3xl shadow-2xl shadow-purple-900/50 border border-purple-500/20 w-full max-w-md mx-auto"
+                    className="relative rounded-3xl shadow-2xl shadow-vf-900/50 border border-vf-500/20 w-full max-w-md mx-auto"
                   />
                 </div>
               </div>
@@ -399,44 +404,44 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 bg-slate-900/50">
+      <section id="about" className="py-24 bg-sheet/70">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-white to-vf-200 bg-clip-text text-transparent">
             About
           </h2>
           
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6">
               <p className="text-lg text-slate-300 leading-relaxed">
-                A seasoned and results-driven technology leader with over 25 years of experience architecting, delivering, and managing complex software and hardware products at massive scale. A holder of <span className="text-purple-400 font-semibold">4 U.S. patents</span> for innovations in software performance and computer hardware.
+                A seasoned and results-driven technology leader with over 25 years of experience architecting, delivering, and managing complex software and hardware products at massive scale. A holder of <span className="text-vf-400 font-semibold">4 U.S. patents</span> for innovations in software performance and computer hardware.
               </p>
               <p className="text-lg text-slate-300 leading-relaxed">
-                A proven expert in implementing <span className="text-purple-400 font-semibold">Agile at Scale</span> frameworks to bring predictability and cross-team communication to 40,000-person organizations. A forward-thinking technologist with hands-on experience in cutting-edge <span className="text-purple-400 font-semibold">AI/LLM</span> and <span className="text-purple-400 font-semibold">modern software and services architecture</span>.
+                A proven expert in implementing <span className="text-vf-400 font-semibold">Agile at Scale</span> frameworks to bring predictability and cross-team communication to 40,000-person organizations. A forward-thinking technologist with hands-on experience in cutting-edge <span className="text-vf-400 font-semibold">AI/LLM</span> and <span className="text-vf-400 font-semibold">modern software and services architecture</span>.
               </p>
             </div>
 
             <div className="grid gap-6">
-              <Card className="bg-slate-800/50 border-purple-500/20 hover:border-purple-500/40 transition-all backdrop-blur-sm shadow-lg hover:shadow-purple-500/10 rounded-2xl">
+              <Card className="bg-sheet/80 border-vf-500/20 hover:border-vf-500/40 transition-all backdrop-blur-sm shadow-lg hover:shadow-vf-500/10 rounded-2xl">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-purple-300">Leadership</h3>
+                  <h3 className="text-xl font-bold mb-3 text-vf-300">Leadership</h3>
                   <p className="text-slate-300">
                     Led teams and organizations from 10 to 40,000 people across Microsoft, startups, and consulting.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-slate-800/50 border-fuchsia-500/20 hover:border-fuchsia-500/40 transition-all backdrop-blur-sm shadow-lg hover:shadow-fuchsia-500/10 rounded-2xl">
+              <Card className="bg-sheet/80 border-vfx-500/20 hover:border-vfx-500/40 transition-all backdrop-blur-sm shadow-lg hover:shadow-vfx-500/10 rounded-2xl">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-fuchsia-300">Innovation</h3>
+                  <h3 className="text-xl font-bold mb-3 text-vf-300">Innovation</h3>
                   <p className="text-slate-300">
                     Pioneered performance testing, self-healing data centers, and contributed to Azure's precursor.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-slate-800/50 border-purple-500/20 hover:border-purple-500/40 transition-all backdrop-blur-sm shadow-lg hover:shadow-purple-500/10 rounded-2xl">
+              <Card className="bg-sheet/80 border-vf-500/20 hover:border-vf-500/40 transition-all backdrop-blur-sm shadow-lg hover:shadow-vf-500/10 rounded-2xl">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-purple-300">Modern Tech</h3>
+                  <h3 className="text-xl font-bold mb-3 text-vf-300">Modern Tech</h3>
                   <p className="text-slate-300">
                     Hands-on with AI/LLMs, modern software and services architecture, and cutting-edge development practices.
                   </p>
@@ -450,7 +455,7 @@ export default function Home() {
       {/* Experience Section */}
       <section id="experience" className="py-24">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white to-vf-200 bg-clip-text text-transparent">
             Experience
           </h2>
 
@@ -521,27 +526,27 @@ export default function Home() {
                 tags: ["Performance Engineering", "Patents", "Innovation"]
               }
             ].map((job, index) => (
-              <Card key={index} className="bg-slate-800/30 border-purple-500/20 hover:border-purple-500/40 transition-all backdrop-blur-sm hover:shadow-lg hover:shadow-purple-500/10 rounded-2xl">
+              <Card key={index} className="bg-slate-800/30 border-vf-500/20 hover:border-vf-500/40 transition-all backdrop-blur-sm hover:shadow-lg hover:shadow-vf-500/10 rounded-2xl">
                 <CardContent className="p-8">
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-1">{job.title}</h3>
-                      <p className="text-purple-300 font-medium">
+                      <p className="text-vf-300 font-medium">
                         {job.url ? (
-                          <a href={job.url} target="_blank" rel="noopener" className="hover:text-purple-200 underline decoration-purple-500/40 underline-offset-4 hover:decoration-purple-300 transition-colors">
+                          <a href={job.url} target="_blank" rel="noopener" className="hover:text-vf-200 underline decoration-vf-500/40 underline-offset-4 hover:decoration-vf-300 transition-colors">
                             {job.company}
                           </a>
                         ) : job.company}
                       </p>
                     </div>
-                    <Badge variant="outline" className="border-purple-500/30 text-purple-300 self-start rounded-full px-4 py-1">
+                    <Badge variant="outline" className="border-vf-500/30 text-vf-300 self-start rounded-full px-4 py-1">
                       {job.period}
                     </Badge>
                   </div>
                   <p className="text-slate-300 mb-6 leading-relaxed">{job.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {job.tags.map((tag, tagIndex) => (
-                      <Badge key={tagIndex} className="bg-purple-500/10 text-purple-300 border-0 rounded-lg px-3 py-1 text-xs">
+                      <Badge key={tagIndex} className="bg-vf-500/10 text-vf-300 border-0 rounded-lg px-3 py-1 text-xs">
                         {tag}
                       </Badge>
                     ))}
@@ -554,9 +559,9 @@ export default function Home() {
       </section>
 
       {/* Patents Section */}
-      <section id="patents" className="py-24 bg-slate-900/50">
+      <section id="patents" className="py-24 bg-sheet/70">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-vf-200 bg-clip-text text-transparent">
             Patents & Innovation
           </h2>
           <p className="text-slate-400 mb-12 text-lg">Recognized innovations in software performance and computer hardware design</p>
@@ -584,14 +589,14 @@ export default function Home() {
                 date: "February 29, 2000"
               }
             ].map((patent, index) => (
-              <Card key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border-purple-500/20 hover:border-purple-500/50 transition-all backdrop-blur-sm hover:shadow-xl hover:shadow-purple-500/20 rounded-2xl group">
+              <Card key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border-vf-500/20 hover:border-vf-500/50 transition-all backdrop-blur-sm hover:shadow-xl hover:shadow-vf-500/20 rounded-2xl group">
                 <CardContent className="p-6">
                   <div className="mb-4">
-                    <Badge className="bg-purple-500/20 text-purple-300 border-0 rounded-lg px-3 py-1 text-xs font-mono">
+                    <Badge className="bg-vf-500/20 text-vf-300 border-0 rounded-lg px-3 py-1 text-xs font-mono">
                       {patent.number}
                     </Badge>
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-purple-300 transition-colors leading-snug">
+                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-vf-300 transition-colors leading-snug">
                     {patent.title}
                   </h3>
                   <p className="text-slate-400 text-sm">{patent.date}</p>
@@ -605,7 +610,7 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="py-24">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-vf-200 bg-clip-text text-transparent">
             Let's Connect
           </h2>
           <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto">
@@ -615,7 +620,7 @@ export default function Home() {
           <div className="flex flex-wrap gap-4 justify-center">
             <Button 
               size="lg"
-              className="bg-gradient-to-r from-purple-600 to-fuchsia-600 hover:from-purple-500 hover:to-fuchsia-500 text-white shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transition-all rounded-xl px-8"
+              className="bg-gradient-to-r from-vf-600 to-vfx-600 hover:from-vf-500 hover:to-vfx-500 text-white shadow-lg shadow-vf-500/30 hover:shadow-vf-500/50 transition-all rounded-xl px-8"
               asChild
             >
               <a href="mailto:KevinVF@hotmail.com">
@@ -626,7 +631,7 @@ export default function Home() {
             <Button 
               size="lg"
               variant="outline"
-              className="border-purple-500/30 text-purple-300 hover:bg-purple-500/10 hover:border-purple-500/50 rounded-xl px-8"
+              className="border-vf-500/30 text-vf-300 hover:bg-vf-500/10 hover:border-vf-500/50 rounded-xl px-8"
               asChild
             >
               <a href="https://www.linkedin.com/in/kevin-van-flandern-1949aa4/" target="_blank" rel="noopener noreferrer">
@@ -637,7 +642,7 @@ export default function Home() {
             <Button 
               size="lg"
               variant="outline"
-              className="border-purple-500/30 text-purple-300 hover:bg-purple-500/10 hover:border-purple-500/50 rounded-xl px-8"
+              className="border-vf-500/30 text-vf-300 hover:bg-vf-500/10 hover:border-vf-500/50 rounded-xl px-8"
               asChild
             >
               <a href="https://vftech.io" target="_blank" rel="noopener">

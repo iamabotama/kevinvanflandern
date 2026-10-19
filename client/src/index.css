@@ -1,6 +1,24 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* IBM Plex, self-hosted (same files as vftech.io); OFL licenses in /fonts */
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400 600;font-display:swap;src:url(/fonts/plex-sans-0.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Serif';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/plex-serif-0.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Serif';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/plex-serif-1.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/plex-mono-0.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/plex-mono-1.woff2) format('woff2')}
+
+/* VFTech palette: ink/sheet surfaces, steel-blue accent (vf), electric blue from the cube art (vfx) */
+@theme {
+  --color-ink: #0E1215;
+  --color-sheet: #151B1F;
+  --color-vf-50: #F0F7FB;  --color-vf-100: #DCEDF6; --color-vf-200: #BFDDEE; --color-vf-300: #9CCBE6;
+  --color-vf-400: #86C0E0; --color-vf-500: #5AA3CC; --color-vf-600: #3D86B3; --color-vf-700: #2F6A8E;
+  --color-vf-800: #2A5673; --color-vf-900: #24465C; --color-vf-950: #15293A;
+  --color-vfx-300: #93A4FF; --color-vfx-400: #6B80FF; --color-vfx-500: #4560FF; --color-vfx-600: #2F48E8;
+  --color-vfx-700: #2537BC; --color-vfx-900: #1A2470; --color-vfx-950: #0E1440;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -120,14 +138,18 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    font-family: 'IBM Plex Serif', Georgia, serif;
+  }
+  h1, h2, h3, h4, h5, h6,
+  nav, button, [data-slot="button"], [data-slot="badge"] {
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
+    letter-spacing: -0.015em;
   }
   .font-mono {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
