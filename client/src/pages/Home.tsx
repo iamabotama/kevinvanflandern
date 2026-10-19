@@ -329,7 +329,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <Badge variant="outline" className="border-vf-500/30 text-vf-400 bg-vf-950/30 backdrop-blur-sm px-4 py-1.5 text-sm font-medium rounded-full">
-                TECHNOLOGY LEADER
+                TECHNOLOGY EXECUTIVE
               </Badge>
               
               <div>
@@ -344,22 +344,22 @@ export default function Home() {
                 </h1>
                 <div className="h-1 w-24 bg-gradient-to-r from-vf-500 to-vfx-500 rounded-full mb-6"></div>
                 <p className="text-xl text-slate-300 leading-relaxed max-w-xl">
-                  25+ years architecting complex systems at massive scale. 4 U.S. patents. Expert in Agile at Scale, AI/LLM, and modern software and services architecture.
+                  I modernize the systems companies run on, and the teams that build them. 25 years across Microsoft Office and Azure, a startup I co-founded as CTO, and a practice leading technology for VC/PE-backed companies.
                 </p>
               </div>
 
               <div className="flex flex-wrap gap-3">
                 <Badge className="bg-vf-500/10 text-vf-300 border border-vf-500/30 hover:bg-vf-500/20 transition-all px-4 py-2 text-sm rounded-xl">
                   <Award className="w-4 h-4 mr-2" />
-                  4 Patents
+                  U.S. Patent Holder
                 </Badge>
                 <Badge className="bg-vfx-500/10 text-vf-300 border border-vfx-500/30 hover:bg-vfx-500/20 transition-all px-4 py-2 text-sm rounded-xl">
                   <Briefcase className="w-4 h-4 mr-2" />
-                  Microsoft Alumni
+                  Microsoft Office &amp; Azure
                 </Badge>
                 <Badge className="bg-vf-500/10 text-vf-300 border border-vf-500/30 hover:bg-vf-500/20 transition-all px-4 py-2 text-sm rounded-xl">
                   <Lightbulb className="w-4 h-4 mr-2" />
-                  AI & Modern Architecture
+                  Co-founder &amp; CTO
                 </Badge>
               </div>
 
@@ -367,9 +367,12 @@ export default function Home() {
                 <Button 
                   size="lg" 
                   className="bg-gradient-to-r from-vf-600 to-vfx-600 hover:from-vf-500 hover:to-vfx-500 text-white shadow-lg shadow-vf-500/30 hover:shadow-vf-500/50 transition-all rounded-xl px-8"
+                asChild
                 >
-                  <Mail className="w-5 h-5 mr-2" />
-                  Get In Touch
+                  <a href="mailto:KevinVF@hotmail.com">
+                    <Mail className="w-5 h-5 mr-2" />
+                    Get In Touch
+                  </a>
                 </Button>
                 <Button 
                   size="lg" 
@@ -413,37 +416,37 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6">
               <p className="text-lg text-slate-300 leading-relaxed">
-                A seasoned and results-driven technology leader with over 25 years of experience architecting, delivering, and managing complex software and hardware products at massive scale. A holder of <span className="text-vf-400 font-semibold">4 U.S. patents</span> for innovations in software performance and computer hardware.
+                I’ve spent 25 years on both sides of technology: writing the code, and running the organizations that ship it. At Microsoft I started as an engineer on Office, where I co-invented the performance-marker system patented as <span className="text-vf-300 font-semibold">US 6,754,612</span>, and later standardized program management across <span className="text-vf-300 font-semibold">Azure’s 40,000-person organization</span>.
               </p>
               <p className="text-lg text-slate-300 leading-relaxed">
-                A proven expert in implementing <span className="text-vf-400 font-semibold">Agile at Scale</span> frameworks to bring predictability and cross-team communication to 40,000-person organizations. A forward-thinking technologist with hands-on experience in cutting-edge <span className="text-vf-400 font-semibold">AI/LLM</span> and <span className="text-vf-400 font-semibold">modern software and services architecture</span>.
+                Today I lead technology for VC/PE-backed companies through <a href="https://vftech.io" target="_blank" rel="noopener" className="text-vf-300 font-semibold underline decoration-vf-500/40 underline-offset-4 hover:decoration-vf-300">VF Associates</a>: modernizing aging platforms, restructuring IT organizations, and putting AI to work where it removes real effort. I stay hands-on, from an AI due-diligence platform for private equity to running a Layer 1 blockchain.
               </p>
             </div>
 
             <div className="grid gap-6">
               <Card className="bg-sheet/80 border-vf-500/20 hover:border-vf-500/40 transition-all backdrop-blur-sm shadow-lg hover:shadow-vf-500/10 rounded-2xl">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-vf-300">Leadership</h3>
+                  <h3 className="text-xl font-bold mb-3 text-vf-300">Scale</h3>
                   <p className="text-slate-300">
-                    Led teams and organizations from 10 to 40,000 people across Microsoft, startups, and consulting.
+                    Standardized program management, work tracking and roadmap planning across Microsoft Azure’s 40,000-person organization.
                   </p>
                 </CardContent>
               </Card>
 
               <Card className="bg-sheet/80 border-vfx-500/20 hover:border-vfx-500/40 transition-all backdrop-blur-sm shadow-lg hover:shadow-vfx-500/10 rounded-2xl">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-vf-300">Innovation</h3>
+                  <h3 className="text-xl font-bold mb-3 text-vf-300">Turnaround</h3>
                   <p className="text-slate-300">
-                    Pioneered performance testing, self-healing data centers, and contributed to Azure's precursor.
+                    Led Matrix Medical’s IT transformation, restructuring a 1,000-person organization to under 100 in 18 months.
                   </p>
                 </CardContent>
               </Card>
 
               <Card className="bg-sheet/80 border-vf-500/20 hover:border-vf-500/40 transition-all backdrop-blur-sm shadow-lg hover:shadow-vf-500/10 rounded-2xl">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-vf-300">Modern Tech</h3>
+                  <h3 className="text-xl font-bold mb-3 text-vf-300">Builder</h3>
                   <p className="text-slate-300">
-                    Hands-on with AI/LLMs, modern software and services architecture, and cutting-edge development practices.
+                    Co-founded Roundit and built the whole product as CTO: iOS, Android, desktop, backend, and Plaid and Stripe payments.
                   </p>
                 </CardContent>
               </Card>
@@ -466,64 +469,58 @@ export default function Home() {
                 company: "VF Associates, LLC",
                 url: "https://vftech.io",
                 period: "Present",
-                description: "Boutique consulting firm providing executive-level program management and technology leadership to VC/PE-backed companies. Led IT transformation for Matrix Medical, restructuring 1,000-person organization to under 100 in 18 months.",
-                tags: ["Executive Leadership", "Business Transformation", "DevOps"]
+                description: "Executive technology leadership and fractional CTO work for VC/PE-backed companies. Led Matrix Medical’s IT transformation, restructuring a 1,000-person organization to under 100 in 18 months.",
+                tags: ["Fractional CTO", "Modernization", "VC/PE"]
               },
               {
                 title: "Technical Advisor",
                 company: "Convergence Technology Solutions (CTS)",
                 period: "Present",
-                description: "Guide development of ARIA, a custom AI/LLM for VC/PE due diligence. Leverage hands-on experience with ChatGPT, Grok, Claude, and Manus to accelerate workflows.",
-                tags: ["AI/LLM", "Technical Advisory", "Fintech"]
+                description: "Technical advisor on ARIA, an AI due-diligence platform for mid-market private equity built on GraphRAG (Neo4j, LangGraph, Supabase). Built the automation that turns product requirements into a structured delivery backlog.",
+                tags: ["AI/LLM", "GraphRAG", "Private Equity"]
               },
               {
-                title: "Community Developer",
-                company: "Gorbogana Blockchain",
-                period: "Present",
-                description: "Architected white paper and SDK for sustainable gaming economy. Launched utility token that became second-best performing on chain for two months. Set up RPC servers and contributed to bridging solutions.",
-                tags: ["Software Architecture", "System Design", "Infrastructure"]
+                title: "Owner & Operator",
+                company: "Cookie Chain",
+                url: "https://cookiechain.io",
+                period: "2026 - Present",
+                description: "Run Cookie Chain, a community-operated SVM Layer 1 blockchain: validator and RPC infrastructure, cross-chain bridging, an open app registry and developer documentation. Built on a simple principle: developer-owned, not just developer-friendly.",
+                tags: ["Infrastructure", "Blockchain", "Developer Platform"]
               },
               {
-                title: "Board of Directors",
-                company: "Meta Research",
+                title: "Board and Advisory Roles",
+                company: "Meta Research · Frogice Inc (Kentucky)",
                 period: "Present",
-                description: "Serve on the Board of Directors, providing executive-level strategic guidance on technology initiatives, corporate governance, and business strategy. Guide decisions on AI/LLM integration, modern software architecture, and program management best practices.",
-                tags: ["Board of Directors", "Corporate Governance", "Strategic Leadership"]
-              },
-              {
-                title: "Advisory Board Member",
-                company: "Frogice Inc (Kentucky)",
-                period: "Present",
-                description: "Advise on technical strategy, product development, and scaling operations. Leverage extensive experience in technology leadership to guide company growth trajectory.",
-                tags: ["Technical Strategy", "Product Development", "Advisory"]
+                description: "Board of Directors at Meta Research and advisory board at Frogice Inc: technology strategy, AI adoption, governance, product development and scaling.",
+                tags: ["Governance", "Technical Strategy"]
               },
               {
                 title: "Principal Program Manager",
                 company: "Microsoft (Azure)",
                 period: "2018 - 2020",
-                description: "Standardized program management across 40,000-person Azure organization. Architected customized Agility at Scale framework with unified work tracking, reporting, and roadmap planning.",
+                description: "Standardized program management across Azure’s 40,000-person organization: one framework for agility at scale, with unified work tracking, reporting and roadmap planning.",
                 tags: ["Agile at Scale", "Azure DevOps", "Program Management"]
               },
               {
                 title: "Co-Founder & CTO",
                 company: "Roundit",
                 period: "2016 - 2018",
-                description: "Co-founded fintech startup for charitable micro-donations. Led end-to-end product development including mobile apps (iOS/Android), desktop app, and backend services. Integrated Plaid and Stripe APIs.",
+                description: "Co-founded a fintech startup for charitable micro-donations and built the full product: iOS and Android apps, desktop, backend services, and Plaid and Stripe payments.",
                 tags: ["Fintech", "CTO", "Full-Stack"]
               },
               {
                 title: "Principal Lead Program Manager",
                 company: "Microsoft (IT)",
                 period: "2012 - 2016",
-                description: "Led team of 10 PMs driving Agile transformation for 150-person engineering org. Managed cross-company rewards system. Led emergency deployment to Shanghai to rescue failing financial system.",
+                description: "Led 10 program managers through an Agile transformation of a 150-person engineering organization. Ran the cross-company rewards system, and led an emergency deployment to Shanghai to recover a failing financial system.",
                 tags: ["Agile Transformation", "Crisis Management", "Leadership"]
               },
               {
                 title: "Software Development Engineer",
                 company: "Microsoft (Office Shared Features)",
                 period: "1996 - 2000",
-                description: "Co-invented revolutionary performance testing harness for entire Office suite (U.S. Patent 6,754,612). Engineered novel solution to inject performance markers into post-compiled code. Built self-healing test environment with 100+ machines.",
-                tags: ["Performance Engineering", "Patents", "Innovation"]
+                description: "Co-invented the performance-testing harness used across the Office suite (US 6,754,612), injecting performance markers into compiled code. Built a self-healing test lab of 100+ machines.",
+                tags: ["Performance Engineering", "Patents", "Test Automation"]
               }
             ].map((job, index) => (
               <Card key={index} className="bg-slate-800/30 border-vf-500/20 hover:border-vf-500/40 transition-all backdrop-blur-sm hover:shadow-lg hover:shadow-vf-500/10 rounded-2xl">
@@ -564,7 +561,7 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-vf-200 bg-clip-text text-transparent">
             Patents & Innovation
           </h2>
-          <p className="text-slate-400 mb-12 text-lg">Recognized innovations in software performance and computer hardware design</p>
+          <p className="text-slate-400 mb-12 text-lg">A utility patent from performance engineering on Microsoft Office, plus three hardware design patents.</p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
@@ -614,7 +611,7 @@ export default function Home() {
             Let's Connect
           </h2>
           <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto">
-            Currently seeking Technical Program Manager, Senior Program Manager, or executive leadership roles.
+            Open to CTO roles, full-time or fractional through VF Associates, with companies modernizing their platforms or putting AI to work.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center">
