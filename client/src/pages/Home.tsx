@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Linkedin, Award, Briefcase, Lightbulb } from "lucide-react";
+import { Mail, Linkedin, Award, Briefcase, Lightbulb, ExternalLink } from "lucide-react";
 import { useEffect, useRef } from "react";
 
 export default function Home() {
@@ -453,6 +453,7 @@ export default function Home() {
               {
                 title: "Chief Executive Officer",
                 company: "VF Associates, LLC",
+                url: "https://vftech.io",
                 period: "Present",
                 description: "Boutique consulting firm providing executive-level program management and technology leadership to VC/PE-backed companies. Led IT transformation for Matrix Medical, restructuring 1,000-person organization to under 100 in 18 months.",
                 tags: ["Executive Leadership", "Business Transformation", "DevOps"]
@@ -519,7 +520,13 @@ export default function Home() {
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-1">{job.title}</h3>
-                      <p className="text-purple-300 font-medium">{job.company}</p>
+                      <p className="text-purple-300 font-medium">
+                        {job.url ? (
+                          <a href={job.url} target="_blank" rel="noopener" className="hover:text-purple-200 underline decoration-purple-500/40 underline-offset-4 hover:decoration-purple-300 transition-colors">
+                            {job.company}
+                          </a>
+                        ) : job.company}
+                      </p>
                     </div>
                     <Badge variant="outline" className="border-purple-500/30 text-purple-300 self-start rounded-full px-4 py-1">
                       {job.period}
@@ -619,6 +626,17 @@ export default function Home() {
               <a href="https://www.linkedin.com/in/kevin-van-flandern-1949aa4/" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-5 h-5 mr-2" />
                 Connect on LinkedIn
+              </a>
+            </Button>
+            <Button 
+              size="lg"
+              variant="outline"
+              className="border-purple-500/30 text-purple-300 hover:bg-purple-500/10 hover:border-purple-500/50 rounded-xl px-8"
+              asChild
+            >
+              <a href="https://vftech.io" target="_blank" rel="noopener">
+                <ExternalLink className="w-5 h-5 mr-2" />
+                VFTech, my firm
               </a>
             </Button>
           </div>
