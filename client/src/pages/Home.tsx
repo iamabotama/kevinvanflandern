@@ -302,11 +302,17 @@ export default function Home() {
             <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-fuchsia-400 bg-clip-text text-transparent">
               KVF
             </div>
-            <div className="hidden md:flex items-center gap-8">
-              <a href="#about" className="text-slate-300 hover:text-purple-400 transition-colors">About</a>
-              <a href="#experience" className="text-slate-300 hover:text-purple-400 transition-colors">Experience</a>
-              <a href="#patents" className="text-slate-300 hover:text-purple-400 transition-colors">Patents</a>
-              <a href="#contact" className="text-slate-300 hover:text-purple-400 transition-colors">Contact</a>
+            <div className="flex items-center gap-8">
+              <div className="hidden md:flex items-center gap-8">
+                <a href="#about" className="text-slate-300 hover:text-purple-400 transition-colors">About</a>
+                <a href="#experience" className="text-slate-300 hover:text-purple-400 transition-colors">Experience</a>
+                <a href="#patents" className="text-slate-300 hover:text-purple-400 transition-colors">Patents</a>
+                <a href="#contact" className="text-slate-300 hover:text-purple-400 transition-colors">Contact</a>
+              </div>
+              {/* Shown on every screen size, since the section links are desktop-only */}
+              <a href="https://vftech.io" target="_blank" rel="noopener" className="text-purple-300 hover:text-purple-200 transition-colors">
+                VFTech <span aria-hidden="true">↗</span>
+              </a>
             </div>
           </div>
         </div>
