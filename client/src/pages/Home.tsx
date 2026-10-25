@@ -369,7 +369,7 @@ export default function Home() {
                   className="bg-gradient-to-r from-vf-600 to-vfx-600 hover:from-vf-500 hover:to-vfx-500 text-white shadow-lg shadow-vf-500/30 hover:shadow-vf-500/50 transition-all rounded-xl px-8"
                 asChild
                 >
-                  <a href="mailto:KevinVF@hotmail.com">
+                  <a href="mailto:kevinvf@vftech.io">
                     <Mail className="w-5 h-5 mr-2" />
                     Get In Touch
                   </a>
@@ -620,9 +620,9 @@ export default function Home() {
               className="bg-gradient-to-r from-vf-600 to-vfx-600 hover:from-vf-500 hover:to-vfx-500 text-white shadow-lg shadow-vf-500/30 hover:shadow-vf-500/50 transition-all rounded-xl px-8"
               asChild
             >
-              <a href="mailto:KevinVF@hotmail.com">
+              <a href="mailto:kevinvf@vftech.io">
                 <Mail className="w-5 h-5 mr-2" />
-                KevinVF@hotmail.com
+                kevinvf@vftech.io
               </a>
             </Button>
             <Button 

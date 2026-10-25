@@ -165,7 +165,7 @@ Particle stream animation parameters can be adjusted in `Home.tsx` under the `CO
 ## Contact
 
 **Kevin Van Flandern**
-- Email: [KevinVF@hotmail.com](mailto:KevinVF@hotmail.com)
+- Email: [kevinvf@vftech.io](mailto:kevinvf@vftech.io)
 - LinkedIn: [linkedin.com/in/kevin-van-flandern-1949aa4](https://www.linkedin.com/in/kevin-van-flandern-1949aa4/)
 
 ---
